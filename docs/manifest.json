@@ -1,5 +1,6 @@
 {
-    "name": "Defuse",
+    "name": "defuse",
+    "short_name": "defuse",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
