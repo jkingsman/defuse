@@ -21,8 +21,8 @@
     border-radius: 50%;
     height: calc(300px - 20px);
     width: calc(300px - 20px);
-    -webkit-animation: breathe 12s infinite cubic-bezier(0.645, 0, 0.355, 1);
-    animation: breathe 12s infinite cubic-bezier(0.645, 0, 0.355, 1);
+    -webkit-animation: breathe 16s infinite cubic-bezier(0.645, 0, 0.355, 1);
+    animation: breathe 16s infinite cubic-bezier(0.645, 0, 0.355, 1);
     animation-play-state: paused;
 }
 
