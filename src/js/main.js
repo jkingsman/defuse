@@ -14,7 +14,7 @@ function startShow() {
     var text1 = '<h1>Ahhhh...</h1><p>Isn\'t that better?</p><p>Enjoy the silence.<br />Take a deep breath.<br />Feel gravity holding you down.<br /><br /><span style="font-style: italic">You\'re free.</span></p><p>We\'re going to try something...</p>';
     var text2 = '<p>Breathe deeply into your stomach<br />in time with the circle.</p><p>We\'ll do 4 breaths.</p><div id="outerCircle"><div id="innerCircle"></div></div>';
     var text3 = '<p>Keep breathing deeply.</p><p>Feel the tide of your breath expanding your chest.</p><p>Notice the weight of your body parts and try to exhale some of the tension in your body with each breath.</p><p>Close your eyes and keep breathing deeply for as long as you\'d like.</p>';
-    var text4 = '<p>The world will burn you out.</p><p>Take time from your day to relax and recenter yourself -- just leave the world outside; your soul will thank you.</p><p><a class="shareLink" href="#" onclick="showBreathing();">Show the breath orb again</a></p><h1>♡</h1><p>Made with love by <a target="_blank" href="http://jacksbrain.com">JWK</a></p>';
+    var text4 = '<p>The world will burn you out.</p><p>Remember to take a few moments to recenter yourself -- just leave the world outside; your soul will thank you.</p><p><a class="shareLink" href="#" onclick="showBreathing();">Show the breath orb again</a></p><h1>♡</h1><p>Made with love by <a target="_blank" href="http://jacksbrain.com">JWK</a></p>';
     var fbShare = '<div class="centered"><a class="shareLink" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//defuse.xyz">Share</a>';
     var timeout = 0;
 
