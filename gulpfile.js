@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     less = require('gulp-less'),
     copy = require('gulp-copy'),
+    del = require('del'),
     cleanCSS = require('gulp-clean-css');
 
 var destination = "./docs";
@@ -38,6 +39,10 @@ gulp.task('img', function() {
         .pipe(gulp.dest(destination));
 });
 
+gulp.task('clean', function () {
+  return del([destination + '/**/*']);
+});
+
 gulp.task("all", ["js", "html", "css", "img"]);
 
 gulp.task('watcher', function() {
@@ -47,4 +52,6 @@ gulp.task('watcher', function() {
     });
 });
 
-gulp.task("default", ["all", "watcher"]);
+gulp.task("default", ["clean", "all", "watcher"]);
+
+gulp.task("build", ["clean", "all"]);

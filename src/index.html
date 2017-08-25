@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -14,24 +14,33 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
-    <meta property="og:title" content="Defuse" />
+    <meta property="og:title" content="Defuse." />
+    <meta name="Description" content="​Unplug. Breath deep. Recenter">
+    <meta property="og:description" content="​Unplug. Breath deep. Recenter">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://defuse.xyz/" />
     <meta property="og:image" content="http://defuse.xyz/og.jpg" />
 
-    <title>Defuse</title>
+    <title>Defuse.</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
 </head>
 
-<body class=" hasGoogleVoiceExt">
+<body>
     <div id="goOfflineMessage" class="pageCover harshBlue" style="z-index: 100;">
         <div class="centered margins">
             <h1>Unplug to proceed</h1>
             <p>Please enter airplane mode and disconnect from wifi.</p>
             <p>Unplugging is a vital component of mindfullness; allow yourself to let go of the stress of notifications and emails for a few minutes.</p>
             <p>The page will progress when internet access is disabled.</p>
+        </div>
 
+        <div class="centered hidden" id="breathingShortcut">
+            <a class="shareLink" href="#" onclick="showBreathing();">Show breath orb</a>
+        </div>
+
+        <div class="centered bottomAnchor">
+            <a class="shareLink" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//defuse.xyz">Share this</a>
         </div>
     </div>
 

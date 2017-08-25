@@ -9,6 +9,7 @@
   "author": "Jack Kingsman <jack.kingsman@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "del": "^3.0.0",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.7.0",

@@ -29,9 +29,9 @@
 @keyframes breathe {
     0% {
         background-color: #C2D1FE;
-        -webkit-transform: scale(0.2);
-        -ms-transform: scale(0.2);
-        transform: scale(0.2);
+        -webkit-transform: scale(0.15);
+        -ms-transform: scale(0.15);
+        transform: scale(0.15);
     }
     25% {
         background-color: #8cbde8;
@@ -47,15 +47,15 @@
     }
     75% {
         background-color: #C2D1FE;
-        -webkit-transform: scale(0.2);
-        -ms-transform: scale(0.2);
-        transform: scale(0.2);
+        -webkit-transform: scale(0.15);
+        -ms-transform: scale(0.15);
+        transform: scale(0.15);
     }
     100% {
         background-color: #C2D1FE;
-        -webkit-transform: scale(0.2);
-        -ms-transform: scale(0.2);
-        transform: scale(0.2);
+        -webkit-transform: scale(0.15);
+        -ms-transform: scale(0.15);
+        transform: scale(0.15);
     }
 }
 
@@ -88,6 +88,7 @@
 html, body, .full-screen {
     height: 100%;
     overflow: hidden;
+    text-transform: lowercase;
 }
 
 body {
@@ -116,6 +117,7 @@ h1 {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -130,4 +132,13 @@ h1 {
 
 .margins {
     margin: 10px;
+}
+
+.bottomAnchor {
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+.shareLink {
+    color: black;
 }
