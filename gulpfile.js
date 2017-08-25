@@ -8,12 +8,13 @@ var gulp = require('gulp'),
     copy = require('gulp-copy'),
     cleanCSS = require('gulp-clean-css');
 
+var destination = "./docs";
 
 gulp.task('js', function() {
     return gulp.src(['./src/js/*.js'])
         .pipe(concat('scripts.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(destination));
 });
 
 gulp.task('css', function() {
@@ -21,7 +22,7 @@ gulp.task('css', function() {
         .pipe(cleanCSS({
             compatibility: 'ie8'
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(destination));
 });
 
 gulp.task('html', function() {
@@ -29,12 +30,12 @@ gulp.task('html', function() {
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(destination));
 });
 
 gulp.task('img', function() {
     return gulp.src('./src/img/*')
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(destination));
 });
 
 gulp.task("all", ["js", "html", "css", "img"]);
