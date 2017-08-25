@@ -1,6 +1,6 @@
 var timing = {
     "text1Time": 4000,
-    "text2Time": 48000, // 12000 * 4 beaths
+    "text2Time": 64000, // 16000 * 4 beaths
     "text3Time": 9000,
     "transitionTime": 3000,
     "addOnTimeout": 3050
