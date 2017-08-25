@@ -11,7 +11,7 @@ function startShow() {
     var textContainer = document.getElementById('textContainer');
 
 
-    var text1 = '<h1>Ahhhh...</h1><p>Isn\'t that better?</p><p>Enjoy the silence.<br />Take a deep breath.<br />Feel gravity holding you down.<br /><br /><span style="font-style: italic">You\'re free.</span></p>';
+    var text1 = '<h1>Ahhhh...</h1><p>Isn\'t that better?</p><p>Enjoy the silence.<br />Take a deep breath.<br />Feel gravity holding you down.<br /><br /><span style="font-style: italic">You\'re free.</span></p><p>We\'re going to try something...</p>';
     var text2 = '<p>Breathe deeply into your stomach<br />in time with the circle.</p><p>We\'ll do 4 breaths.</p><div id="outerCircle"><div id="innerCircle"></div></div>';
     var text3 = '<p>Keep breathing deeply and close your eyes.</p><p>Feel the tide of your breath expanding your chest.</p><p>Notice the weight of your body parts and try to let go of tension in your body.</p><p>Spend as long as you\'d like with your eyes closed.</p>';
     var text4 = '<p>The world will burn you out.</p><p>Take time from your day to relax and recenter yourself -- just leave the world outside; your soul will thank you.</p><p><a class="shareLink" href="#" onclick="showBreathing();">Show the breath orb again</a></p><h1>♡</h1><p>Made with love by <a target="_blank" href="http://jacksbrain.com">JWK</a></p>';
