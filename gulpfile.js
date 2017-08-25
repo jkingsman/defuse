@@ -39,11 +39,16 @@ gulp.task('img', function() {
         .pipe(gulp.dest(destination));
 });
 
+gulp.task('static', function() {
+    return gulp.src('./src/static/*')
+        .pipe(gulp.dest(destination));
+});
+
 gulp.task('clean', function () {
   return del([destination + '/**/*']);
 });
 
-gulp.task("all", ["js", "html", "css", "img"]);
+gulp.task("all", ["js", "html", "css", "img", "static"]);
 
 gulp.task('watcher', function() {
     var watcher = gulp.watch('./src/**/*', ['all']);
