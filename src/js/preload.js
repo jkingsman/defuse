@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(_e) {
     }
 
     window.addEventListener('offline', function() {
-        startShow();
+        timers.push(setTimeout(startShow, 3000));
     });
 
     if (document.cookie.indexOf('visited') !== -1) {

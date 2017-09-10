@@ -6,6 +6,9 @@ var timing = {
     "addOnTimeout": 3050
 };
 
+// array of timers to stop everything
+var timers = [];
+
 function startShow() {
     var goOfflineMessage = document.getElementById('goOfflineMessage');
     var textContainer = document.getElementById('textContainer');
@@ -23,62 +26,63 @@ function startShow() {
     timeout += timing.addOnTimeout;
 
     // load and brighten text1
-    setTimeout(function(container) {
+    timers.push(setTimeout(function(container) {
         textContainer.innerHTML = text1;
         brightenDiv(container);
-    }, timeout, textContainer);
+    }, timeout, textContainer));
 
     // dim text1
     timeout += timing.addOnTimeout + timing.text1Time;
-    setTimeout(function(container) {
+    timers.push(setTimeout(function(container) {
         dimDiv(container);
-    }, timeout, textContainer);
+    }, timeout, textContainer));
 
     // load and brighten text2/breathing
     timeout += timing.addOnTimeout;
-    setTimeout(function(container, text) {
+    timers.push(setTimeout(function(container, text) {
         container.innerHTML = text;
         brightenDiv(container);
-    }, timeout, textContainer, text2);
+    }, timeout, textContainer, text2));
 
     // play breathing
     timeout += timing.addOnTimeout;
-    setTimeout(function() {
+    timers.push(setTimeout(function() {
         document.getElementById('innerCircle').style.animationPlayState = "running";
-    }, timeout);
+    }, timeout));
 
     // wait for breaths and dim breathing
     timeout += timing.text2Time;
-    setTimeout(function(container) {
+    timers.push(setTimeout(function(container) {
         document.getElementById('innerCircle').style.animationPlayState = "paused";
         dimDiv(container);
-    }, timeout, textContainer);
+    }, timeout, textContainer));
 
     // load and brighten text3
     timeout += timing.addOnTimeout;
-    setTimeout(function(container, text) {
+    timers.push(setTimeout(function(container, text) {
         container.innerHTML = text;
         brightenDiv(container);
-    }, timeout, textContainer, text3);
+    }, timeout, textContainer, text3));
 
     // dim text3
     timeout += timing.addOnTimeout + timing.text3Time;
-    setTimeout(function(container) {
+    timers.push(setTimeout(function(container) {
         dimDiv(container);
-    }, timeout, textContainer);
+    }, timeout, textContainer));
 
     // load and brighten text4
     timeout += timing.addOnTimeout + timing.transitionTime;
-    setTimeout(function(container, text) {
+    timers.push(setTimeout(function(container, text) {
         container.innerHTML = text;
         brightenDiv(container);
 
         // set cookie for having done it to display button
         document.cookie = "visited=true";
-    }, timeout, textContainer, text4 + fbShare);
+    }, timeout, textContainer, text4 + fbShare));
 }
 
 function showBreathing() {
+    stopTimers(); // preempt standard playthrough
     var goOfflineMessage = document.getElementById('goOfflineMessage');
     var textContainer = document.getElementById('textContainer');
     var breathingHTML = '<div id="outerCircle"><div id="innerCircle"></div></div>';
@@ -92,4 +96,12 @@ function showBreathing() {
         brightenDiv(container);
         document.getElementById('innerCircle').style.animationPlayState = "running";
     }, timing.transitionTime, textContainer, breathingHTML);
+}
+
+function stopTimers(){
+    timers.forEach(function(timerID){
+        clearInterval(timerID);
+    });
+
+    console.log("All timers auto-stopped.");
 }

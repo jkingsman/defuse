@@ -21,14 +21,14 @@
     border-radius: 50%;
     height: calc(300px - 20px);
     width: calc(300px - 20px);
-    -webkit-animation: breathe 16s infinite cubic-bezier(0.645, 0, 0.355, 1);
-    animation: breathe 16s infinite cubic-bezier(0.645, 0, 0.355, 1);
+    -webkit-animation: breathe 16s infinite ease-in-out;
+    animation: breathe 16s infinite ease-in-out;
     animation-play-state: paused;
 }
 
 @keyframes breathe {
     0% {
-        background-color: #C2D1FE;
+        background-color: #cce7ff;
         -webkit-transform: scale(0.15);
         -ms-transform: scale(0.15);
         transform: scale(0.15);
@@ -46,13 +46,13 @@
         transform: scale(1);
     }
     75% {
-        background-color: #C2D1FE;
+        background-color: #cce7ff;
         -webkit-transform: scale(0.15);
         -ms-transform: scale(0.15);
         transform: scale(0.15);
     }
     100% {
-        background-color: #C2D1FE;
+        background-color: #cce7ff;
         -webkit-transform: scale(0.15);
         -ms-transform: scale(0.15);
         transform: scale(0.15);
