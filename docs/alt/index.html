@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Defuse Breather</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <style type="text/css">
       @keyframes breathe {
         0% {
@@ -174,9 +174,8 @@
       }
 
       #pageContainer {
-        height: 75vh;
-        max-width: 100vw;
-        aspect-ratio: 1 / 1;
+        height: min(75vh, 75vw);
+        width: min(75vh, 75vw);
         position: absolute;
       }
 
@@ -275,5 +274,16 @@
         </div>
       </div>
     </div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const breaths_per_minute = urlParams.get('bpm') || 4;
+      const seconds_per_breath = 60 / breaths_per_minute;
+
+      document.querySelector("#innerCircle").style.animationDuration = `${seconds_per_breath}s`;
+      document.querySelector("#left").style.animationDuration = `${2 * seconds_per_breath}s`;
+      document.querySelector("#top").style.animationDuration = `${2 * seconds_per_breath}s`;
+      document.querySelector("#right").style.animationDuration = `${2 * seconds_per_breath}s`;
+      document.querySelector("#bottom").style.animationDuration = `${2 * seconds_per_breath}s`;
+    </script>
   </body>
 </html>
